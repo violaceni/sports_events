@@ -34,32 +34,6 @@ class CreateMatchesTable extends Migration
     public function down()
     {
         Schema::dropIfExists('matches');
-        $table->foreign('first_team_id')
-            ->references('id')
-            ->on('teams')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        $table->foreign('second_team_id')
-            ->references('id')
-            ->on('teams')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        $table->foreign('location_id')
-            ->references('id')
-            ->on('locations')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-        $table->foreign('event_id')
-            ->references('id')
-            ->on('events')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-            $table->foreign('type_id')
-            ->references('id')
-            ->on('types')
-            ->onDelete('cascade')
-            ->onUpdate('cascade');
-
 
     }
 }
