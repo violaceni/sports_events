@@ -11,7 +11,7 @@ class Event extends Model
 {
     protected $table = 'events';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'start_date', 'end_date', 'description', 'status_id_fk', 'category_id_fk'];
+    protected $fillable = ['name', 'start_date', 'end_date', 'description', 'status_id', 'category_id'];
 
     public function status()
     {
@@ -25,6 +25,6 @@ class Event extends Model
 
     public function matches()
     {
-        return $this->hasMany(Match::class, 'event_id_fk');
+        return $this->hasMany(Match::class, 'event_id');
     }
 }

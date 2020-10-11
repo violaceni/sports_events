@@ -12,7 +12,7 @@ class Match extends Model
 {
     protected $table = 'matches';
     protected $primaryKey = 'id';
-    protected $fillable = ['start_time', 'end_time', 'first_team_id_fk', 'second_team_id_fk', 'location_id_fk', 'event_id_fk', 'type_id_fk'];
+    protected $fillable = ['start_time', 'end_time', 'first_team_id', 'second_team_id', 'location_id', 'event_id', 'type_id'];
 
     public function location()
     {

@@ -12,7 +12,7 @@ class Status extends Model
 
     public function event()
     {
-        return $this->belongsTo(Event::class, 'satus_id_fk');
+        return $this->belongsTo(Event::class, 'satus_id');
     }
 
 }
